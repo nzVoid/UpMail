@@ -1,11 +1,12 @@
 .nav{
-    width: 100%;
+    width: 100vw;
     height: 100px;
     background: #282c34;
     position: fixed;
     top: 0px;
     padding-left: 50px;
     padding-right: 50px;
+    z-index: 999;
 }
 
 .nav_link{
@@ -15,6 +16,11 @@
     position: absolute;
     top: 34%;
 }
+.rightItem{
+    float: right;
+    padding-right: 9%;
+}
+
 ul {
     list-style-type: none;
     margin: 0;

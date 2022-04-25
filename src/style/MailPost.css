@@ -1,0 +1,26 @@
+.MailItem{
+    margin-bottom: 20px;
+    position: relative;
+    top: 120px;
+    left: 120px;
+    background-color: #282c34;
+    height: 40px;
+    border-style: solid;
+    border-color: #f1c40c;
+    border-radius: 10px;
+    border-width: 2px;
+    padding: 20px;
+}
+
+
+.itemRightMail{
+    float: right;
+    color: white;
+    padding-right: 15px;
+}
+
+.itemLeftMail{
+    padding-left: 25px;
+    color: white;
+    padding-right: 15px;
+}

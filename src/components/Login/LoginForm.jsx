@@ -10,8 +10,6 @@ function Enter(){
     root.render(
         <Main></Main>
     )
-
-
 }
 
 const LoginForm = () => {
