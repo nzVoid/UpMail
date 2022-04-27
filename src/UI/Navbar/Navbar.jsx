@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className="nav">
             <nav>
                 <ul>
-                    <li><a className="nav_link" href="src/UI/Navbar/Navbar#">UpMail</a></li>
+                    <li><a className="nav_link" href="/">UpMail</a></li>
                     <li className="rightItem"><a href="#" className="nav_link" onClick={() => {setProfileModalActive(true)}}>Profile</a></li>
                 </ul>
             </nav>

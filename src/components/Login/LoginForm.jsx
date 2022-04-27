@@ -1,16 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import '../../style/LoginForm.css'
-import Navbar from "../../UI/Navbar/Navbar";
-import LeftMenu from "../../UI/LeftMenu/LeftMenu";
 import Main from "../Main/Main";
+import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
 
-function Enter(){
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(
-        <Main></Main>
-    )
-}
+
 
 const LoginForm = () => {
     return (
@@ -22,8 +16,7 @@ const LoginForm = () => {
                 <label><b>Password</b></label><p></p>
                 <input className="LoginInput"/>
                 <div className="buttonBlock">
-                    <button id="loginForm_button" onClick={Enter}>Login</button>
-
+                    <Link to="/inbox"><button id="loginForm_button">Login</button></Link>
                 </div>
             </div>
 

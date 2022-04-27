@@ -3,6 +3,7 @@ import LeftMenu from "../../UI/LeftMenu/LeftMenu";
 import Navbar from "../../UI/Navbar/Navbar";
 import MailPost from "../../UI/MailPost/MailPost";
 import '../../style/Main.css'
+import {Link} from "react-router-dom";
 
 const Main = () => {
     const [mail,setMail] = useState([
@@ -26,8 +27,8 @@ const Main = () => {
                     <MailPost post={post}></MailPost>
                 )}
             </div>
-
         </div>
+
     );
 };
 

@@ -14,9 +14,8 @@ const LeftMenu = () => {
     return (
         <div className="widget">
             <ul className="widget-list">
-                <li onClick={Enter}><a >Входящие</a></li>
+                <li><a href="inbox">Входящие</a></li>
                 <li><a href="">Отправленные</a></li>
-
             </ul>
         </div>
     );
