@@ -16,7 +16,7 @@ const MailOpen = (props) => {
                     <div className="separator"></div>
                     <span>Date: {props.post.date}</span><br/>
                 </div>
-            </div>2
+            </div>
         </div>
     );
 };

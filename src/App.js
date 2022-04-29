@@ -7,14 +7,21 @@ import Mail from "./pages/Mail";
 
 
 function App() {
+
   return (
       <BrowserRouter>
           <MainWindow/>
           <Routes>
               <Route path="/" element={<MainWindow/>}/>
+          </Routes>
+          <Routes>
               <Route path="/login" element={<LoginForm/>}/>
+          </Routes>
+          <Routes>
               <Route path="/inbox" element={<Inbox/>}/>
-              <Route path="/mail" element={<Mail></Mail>}></Route>
+          </Routes>
+          <Routes>
+              <Route path="/mail" element={<MainWindow/>}></Route>
           </Routes>
       </BrowserRouter>
 );

@@ -1,34 +1,33 @@
-import React, {useState} from 'react';
+import React from 'react';
 import '../../style/MailPost.css'
-import ReactDOM from "react-dom/client";
-import MailOpen from "../FullMail/MailOpen";
-import {Link} from "react-router-dom";
+import {render} from "react-dom";
+import Navbar from "../Navbar/Navbar";
+import LeftMenu from "../LeftMenu/LeftMenu";
+import {useNavigate} from "react-router";
 
-function mailOpenFullwPath(){
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(
-
+function MailOpen(props){
+    render(
+        <div>
+            <Navbar></Navbar>
+            <LeftMenu></LeftMenu>
+            <div className="mailOpen">
+                <div className="mailFullContent">
+                    <span>From: {props.post.from}</span><br/>
+                    <div className="separator"></div>
+                    <span>Message: {props.post.body}</span><br/>
+                    <div className="separator"></div>
+                    <span>Date: {props.post.date}</span><br/>
+                </div>
+            </div>
+        </div>, document.getElementById("root")
     )
 }
 
-const MailPost = (props) => {
-    const [mail] = useState([
-        {from: props.post.from, body: props.post.body, date: props.post.date},
-    ])
+
+
+function MailPost(props){
     return (
-        <div className="MailItem" onClick={() => {
-               /*(mail.map(post => {
-                       const root = ReactDOM.createRoot(document.getElementById('root'));
-                       root.render(
-                           <MailOpen post={post}></MailOpen>
-                       )
-               })
-               )*/
-                <Link to="/mail" ></Link>
-
-
-
-           }
+        <div className="MailItem" onClick={() => MailOpen(props)
        }>
            <div className="mailContent">
                <span className="itemLeftMail">{props.post.from}</span>
@@ -38,5 +37,5 @@ const MailPost = (props) => {
        </div>
     );
 };
-//<Link to="/mail"></Link>
+
 export default MailPost;
