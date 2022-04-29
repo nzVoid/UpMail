@@ -3,8 +3,10 @@ import LeftMenu from "../../UI/LeftMenu/LeftMenu";
 import Navbar from "../../UI/Navbar/Navbar";
 import MailPost from "../../UI/MailPost/MailPost";
 import '../../style/Main.css'
+import Modal from "../../UI/Modal/Modal";
 
-const Main = () => {
+
+const Main = (props) => {
     const [mail,setMail] = useState([
         {from: 'vilgelm@gmail.com', body: 'hello', date: '14:50 15.05.2033'},
         {from: 'herdon@gmail.com', body: 'where is my money', date: '13:50 15.05.2033'},
@@ -17,13 +19,23 @@ const Main = () => {
         {from: 'vorgen@gmail.com', body: 'welcome to hell', date: '13:50 15.05.2033'},
         {from: 'jakub@gmail.com', body: 'i am tired', date: '13:50 15.05.2033'},
     ])
+    
+    const [modalVisible, setModalVisible] = useState(false);
+    const [modalPost, setModalPost] = useState({});
+
+    const setPostData = (data) => {
+        setModalPost(data);
+        setModalVisible(true);
+    }
+
     return (
         <div>
             <LeftMenu></LeftMenu>
             <Navbar></Navbar>
+            { modalVisible? <Modal onClose={() => setModalVisible(false)} post={modalPost}/> : null }
             <div className="postsMail">
                 {mail.map(post =>
-                    <MailPost post={post}></MailPost>
+                    <MailPost post={post} setPostData={setPostData}></MailPost>
                 )}
             </div>
         </div>
