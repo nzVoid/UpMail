@@ -3,11 +3,9 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import MainWindow from "./components/MainWindow/MainWindow";
 import LoginForm from "./components/Login/LoginForm";
 import Inbox from "./pages/Inbox";
-import Mail from "./pages/Mail";
-
+import MailOpen from "./UI/FullMail/MailOpen";
 
 function App() {
-
   return (
       <BrowserRouter>
           <MainWindow/>
@@ -21,10 +19,10 @@ function App() {
               <Route path="/inbox" element={<Inbox/>}/>
           </Routes>
           <Routes>
-              <Route path="/mail" element={<MainWindow/>}></Route>
+              <Route path="/mail" element={<MailOpen/>}></Route>
           </Routes>
       </BrowserRouter>
-);
+  );
 }
 
 export default App;

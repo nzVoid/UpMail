@@ -2,9 +2,10 @@ import React from 'react';
 import '../../style/MailOpen.css'
 import Navbar from "../Navbar/Navbar";
 import LeftMenu from "../LeftMenu/LeftMenu";
+import {render} from "react-dom";
 
-const MailOpen = (props) => {
-    return (
+function MailOpen(props){
+    render (
         <div>
             <Navbar></Navbar>
             <LeftMenu></LeftMenu>
@@ -17,7 +18,7 @@ const MailOpen = (props) => {
                     <span>Date: {props.post.date}</span><br/>
                 </div>
             </div>
-        </div>
+        </div>, document.getElementById("root")
     );
 };
 
