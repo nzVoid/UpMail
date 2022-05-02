@@ -10,9 +10,15 @@ function MailPost(props){
             props.setPostData(props.post)
         }}>
            <div className="mailContent">
-               <span className="itemLeftMail">{props.post.from}</span>
-               <span className="itemLeftMail">{props.post.body}</span>
-               <span className="itemRightMail">{props.post.date}</span>
+               <div className="leftItemPost">
+                   <span className="itemLeftMail">{props.post.from}</span>
+                   <span className="itemLeftMail">{props.post.body}</span>
+               </div>
+               <div className="rightItemPost">
+                   <span >{props.post.date}</span>
+               </div>
+
+
            </div>
        </div>
     );

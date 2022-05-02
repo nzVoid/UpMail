@@ -4,9 +4,8 @@
     background: #282c34;
     position: fixed;
     top: 0px;
-    padding-left: 50px;
-    padding-right: 50px;
     z-index: 999;
+    padding-right: 50px;
 }
 
 .nav_link{
@@ -14,15 +13,23 @@
     color: #f1c40c;
     font-size: 30px;
     position: absolute;
-    top: 34%;
-}
-.rightItem{
-    float: right;
-    padding-right: 9%;
+    top:32%;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.nav_link.right{
+    float: right;
+}
+
+.leftNav{
+    position: relative;
+    top:32%;
+    padding-left: 2%;
+}
+
+.rightNav{
+    position: relative;
+    top:32%;
+    padding-right: 2%;
+    width: 100px;
+    float: right;
 }

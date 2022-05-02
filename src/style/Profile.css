@@ -6,7 +6,7 @@
     display: flex;
     left: 0;
     top: 0;
-    z-index: 9999;
+    z-index: 9999999999999999999999999999999999999999;
     align-items: center;
     justify-content: center;
     transform: scale(0);

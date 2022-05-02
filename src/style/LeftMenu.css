@@ -1,26 +1,19 @@
 .widget {
-    z-index: -1;
+    z-index: 9999999;
     position: fixed;
     top:100px;
-    width: 150px;
+    width: 7vw;
     height: 100%;
     background: #242428;
     color: #f1c40c;
     padding: 20px 30px;
     font-family: 'Roboto', sans-serif;
 }
-.widget-title {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #222;
-    font-size: 16px;
-    padding-left: 15px;
-    margin-bottom: 15px;
-    border-left: 2px solid #d9a123;
-}
+
 .widget-list {
     padding: 0;
     list-style: none;
+    width: 7vw;
 }
 .widget-list a:before {
     margin-right: 14px;

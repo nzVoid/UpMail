@@ -1,0 +1,70 @@
+.SendMailModalFull{
+    position: relative;
+    width: 20vw;
+    height: 55vh;
+    top:15%;
+    left: 9vw;
+    border-radius: 7px;
+    border-width: 1px;
+    border-color: #f1c40c;
+    border-style: solid;
+    background: #282c34;
+    z-index: 999999999999;
+    transform: scale(0);
+    padding: 15px;
+}
+
+.SendMailModalFull.active{
+    transform: scale(1);
+}
+
+.SendMail_content{
+    position: relative;
+    width: 19vw;
+    height: 55vh;
+    padding: 10px;
+    margin: 1px;
+}
+
+.SenMail_NavItem{
+    width: 10px;
+}
+
+.showFull{
+    position: relative;
+    left: 10px;
+}
+
+.closeButton{
+    position: relative;
+    width: 18vw;
+
+}
+
+.fromInp{
+    width: 18.5vw;
+}
+.topicInp{
+    width: 18.5vw;
+
+}
+.bodyInp{
+    width: 18.5vw;
+    height: 47vh;
+    resize: none;
+}
+
+.navUl{
+    position: relative;
+
+    margin: 0;
+    padding: 2px;
+}
+
+.navUl li{
+    display: inline;
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+

@@ -2,25 +2,29 @@
     margin-bottom: 20px;
     position: relative;
     top: 120px;
-    left: 120px;
+    left: 6%;
     background-color: #282c34;
-    height: 40px;
+    height: 2vh;
+    width: 86vw;
     border-style: solid;
-    border-color: #f1c40c;
-    border-radius: 10px;
-    border-width: 2px;
+    border-color: rgba(241, 196, 12, 0.36);
+    border-radius: 7px;
+    border-width: 1px;
     padding: 20px;
-}
-
-
-.itemRightMail{
-    float: right;
-    color: white;
-    padding-right: 15px;
+    cursor: pointer;
 }
 
 .itemLeftMail{
-    padding-left: 25px;
+    padding-left: 2%;
     color: white;
-    padding-right: 15px;
+    padding-right: 1%;
+}
+
+.rightItemPost{
+    position: relative;
+    float: right;
+    padding-right: 1%;
+    color: white;
+    top: -17px;
+
 }

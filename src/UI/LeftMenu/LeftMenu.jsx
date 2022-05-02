@@ -1,22 +1,21 @@
-import React from 'react';
-import ReactDOM from "react-dom/client";
+import React, {useState} from 'react';
 import '../../style/LeftMenu.css'
-import Main from "../../components/Main/Main";
-
-function Enter(){
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(
-        <Main></Main>
-    )
-}
+import Btn from "../Button/Btn";
+import Profile from "../../components/Profile/Profile";
+import SendMailModal from "../SendMailModal/SendMailModal";
 
 const LeftMenu = () => {
+    const [SendMailModalActive, setMailSendModalActive] = useState(false)
     return (
         <div className="widget">
             <ul className="widget-list">
+                <Btn children={"Напишите"} onClick={() => {
+                    setMailSendModalActive(true)
+                }}></Btn>
                 <li><a href="inbox">Входящие</a></li>
                 <li><a href="">Отправленные</a></li>
             </ul>
+            <SendMailModal active={SendMailModalActive} setActive={setMailSendModalActive}></SendMailModal>
         </div>
     );
 };
