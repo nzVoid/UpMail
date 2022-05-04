@@ -1,9 +1,9 @@
-import React from "react";
-import '../../style/LoginForm.css'
+import React from 'react';
+import ReactDOM from "react-dom/client";
 import {Link} from "react-router-dom";
 
-const LoginForm = () => {
-    return (
+function LoginPage(){
+    return(
         <div className="Login_Form">
             <h1 className="label_login">Login</h1>
             <div className="main_block">
@@ -15,9 +15,8 @@ const LoginForm = () => {
                     <Link to="/inbox"><button id="loginForm_button">Login</button></Link>
                 </div>
             </div>
-
         </div>
-    );
-};
+    )
+}
+export default LoginPage;
 
-export default LoginForm;

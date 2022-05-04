@@ -1,12 +1,12 @@
 import './App.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import MainWindow from "./components/MainWindow/MainWindow";
-import LoginForm from "./components/Login/LoginForm";
 import Inbox from "./pages/Inbox";
 import MailOpen from "./UI/FullMail/MailOpen";
+import LoginForm from "./components/Login/LoginForm";
 
-function App() {
-  return (
+function App(){
+  return(
       <BrowserRouter>
           <MainWindow/>
           <Routes>

@@ -4,8 +4,6 @@ import Navbar from "../../UI/Navbar/Navbar";
 import MailPost from "../../UI/MailPost/MailPost";
 import '../../style/Main.css'
 import Modal from "../../UI/Modal/Modal";
-import SendMailModalFull from "../../UI/SendMailModal/SendMailModalFull";
-
 
 const Main = (props) => {
     const [mail,setMail] = useState([
@@ -21,6 +19,7 @@ const Main = (props) => {
         {from: 'jakub@gmail.com', body: 'i am tired', date: '13:50 15.05.2033'},
     ])
     
+
     const [modalVisible, setModalVisible] = useState(false);
     const [modalPost, setModalPost] = useState({});
 
@@ -33,8 +32,10 @@ const Main = (props) => {
         <div>
             <LeftMenu></LeftMenu>
             <Navbar></Navbar>
-            { modalVisible? <SendMailModalFull onClose={() => setModalVisible(false)} post={modalPost}/> : null}
-            { modalVisible? <Modal onClose={() => setModalVisible(false)} post={modalPost}/> : null }
+
+            { modalVisible? <Modal onClose={() => setModalVisible(false)}
+                                   post={modalPost}/> : null }
+
             <div className="postsMail">
                 {mail.map(post =>
                     <MailPost post={post} setPostData={setPostData}></MailPost>
