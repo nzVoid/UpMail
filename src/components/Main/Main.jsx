@@ -5,40 +5,43 @@ import MailPost from "../../UI/MailPost/MailPost";
 import '../../style/Main.css'
 import Modal from "../../UI/Modal/Modal";
 
-const Main = (props) => {
-     const [mail,setMail] = useState([
-         {from: 'vilgelm@gmail.com', body: 'hello', date: '14:50 15.05.2033'},
-         {from: 'herdon@gmail.com', body: 'where is my money', date: '13:50 15.05.2033'},
-         {from: 'fiebruifbef@gmail.com', body: 'hello dude', date: '17:50 15.05.2033'},
-         {from: 'midas@gmail.com', body: 'u a ok', date: '13:50 15.05.2033'},
-         {from: 'kelburn@gmail.com', body: 'hola senor', date: '13:50 15.05.2033'},
-         {from: 'gabriel@gmail.com', body: 'But Does It Djent', date: '13:50 15.05.2033'},
-     ])
+class Main extends React.Component{
+    componentDidMount = async () =>{
+        const res = await fetch('http://localhost:3001/inbox')
+        const data = await res.json()
+        this.setState({
+            data: data,
+        })
+    }
 
-    const [modalVisible, setModalVisible] = useState(false);
+    state = {
+        modalVisible: false,
+        modalPost: {}
+    }
+
+    /*const [modalVisible, setModalVisible] = useState(false);
     const [modalPost, setModalPost] = useState({});
-
     const setPostData = (data) => {
         setModalPost(data);
         setModalVisible(true);
-    }
+    }*/
 
-    return (
-        <div>
-            <LeftMenu></LeftMenu>
-            <Navbar></Navbar>
-
-            {modalVisible ? <Modal onClose={() => setModalVisible(false)}
-                                   post={modalPost}/> : null}
-
-            <div className="postsMail">
-                {mail.map(post =>
-                    <MailPost post={post} setPostData={setPostData}></MailPost>
-                )}
+    render() {
+        return (
+            <div>
+                <LeftMenu></LeftMenu>
+                <Navbar></Navbar>
+                {this.state.modalVisible ? <Modal onClose={() => this.setState({modalVisible: true})}
+                                            post={this.state.data}/> : null}
+                <div className="postsMail">
+                    {this.state.data.map(post =>
+                        <MailPost post={post}></MailPost>
+                    )}
+                </div>
             </div>
-        </div>
 
-    );
+        );
+    }
 };
 
 export default Main;
