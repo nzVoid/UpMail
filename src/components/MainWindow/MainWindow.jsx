@@ -14,6 +14,7 @@ function MainWindow() {
             </div>
         </div>
     );
+
 }
 
 export default MainWindow;
