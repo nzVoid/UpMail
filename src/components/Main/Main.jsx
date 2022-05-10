@@ -16,13 +16,13 @@ class Main extends React.Component{
     setPostData = (data) => {
         this.setState(
             {
-                modalVisible: true,
+                modalMailVisible: true,
                 modalPost: data
             }
         )
     }
     state = {
-        modalVisible: false,
+        modalMailVisible: false,
         modalPost: {}
     }
     render() {
@@ -30,7 +30,7 @@ class Main extends React.Component{
             <div>
                 <LeftMenu></LeftMenu>
                 <Navbar></Navbar>
-                {this.state.modalVisible ? <Modal onClose={() => this.setState({modalVisible: true})}
+                {this.state.modalMailVisible ? <Modal onClose={() => this.setState({modalMailVisible: true})}
                                                   post={this.state.data}/> : null}
                 <div className="postsMail">
                     {this.state.data.map(post =>
