@@ -7,17 +7,17 @@ import Modal from "../../UI/Modal/Modal";
 
 class Main extends React.Component {
     componentDidMount = async () => {
-        const res = await fetch('http://localhost:3001//mailbox')
-        const data = await res.json()
+        const res = await fetch('http://localhost:3001/mailbox')
+        const dataResp = await res.json()
         this.setState({
-            data: data,
+            data: dataResp,
         })
     }
-    setPostData = (data) => {
+    setPostData = (dataRe) => {
         this.setState(
             {
                 modalMailVisible: true,
-                modalPost: data
+                modalPost: dataRe
             }
         )
     }
@@ -34,7 +34,7 @@ class Main extends React.Component {
                 <LeftMenu></LeftMenu>
                 <Navbar></Navbar>
                 {this.state.modalMailVisible ? <Modal onClose={() => this.setState({ modalMailVisible: true })}
-                    post={this.state.data} /> : null}
+                    post={this.state.data }/> : null}
                 <div className="postsMail">
                     {this.state.data.map(post =>
                         <MailPost post={post} setPostData={this.setPostData}></MailPost>
@@ -46,10 +46,3 @@ class Main extends React.Component {
 };
 
 export default Main;
-
-/*const [modalVisible, setModalVisible] = useState(false);
-  const [modalPost, setModalPost] = useState({});
-  const setPostData = (data) => {
-      setModalPost(data);
-      setModalVisible(true);
-  }*/
