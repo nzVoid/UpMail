@@ -6,7 +6,7 @@ const cors = require('cors')
 app.use(cors())
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.get('/inbox', (req, res) => {
+app.get('/mailbox', (req, res) => {
     res.sendFile(`${__dirname}/data/inbox.json`);
 });
 
