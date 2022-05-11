@@ -17,18 +17,22 @@ class Main extends React.Component {
         this.setState(
             {
                 modalMailVisible: true,
-                modalPost: dataRe
+                modalPost: dataRe.id
             }
         )
     }
 
     state = {
         modalMailVisible: false,
-        modalPost: {},
+        // тут хранишь id той записи по которой юзер ткнул
+        modalPost: 0,
+        // тут хранишь только нужные для отображения данные
         data: [{
+            id: 1,
             from : 'test 1'
         },
         {
+            id: 2,
             from : 'test 2'
         },]
     }

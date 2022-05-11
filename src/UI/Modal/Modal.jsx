@@ -4,6 +4,21 @@ import Navbar from "../Navbar/Navbar";
 import LeftMenu from "../LeftMenu/LeftMenu";
 
 class Modal extends React.Component {
+    async componentDidMount() {
+        const postId = this.props.modalPost;
+        const res = await fetch(`http://localhost:3001/mailbox/${postId}`)
+        const postData = await res.json();
+        this.setState({ 
+            postData
+        })
+    }
+
+    state = {
+        postData : {
+
+        }
+    }
+
     onClose = () => {
         this.onClose();
     }
@@ -16,11 +31,11 @@ class Modal extends React.Component {
                 <div className="mailOpen">
                     <div className="mailFullContent">
                         <span className="close" onClick={this.onClose} >&times;</span>
-                        <span>From: {this.props.modalPost.from}</span><br/>
+                        <span>ID: {this.state.from}</span><br/>
                         <div className="separator"></div>
-                        <span>Message: {this.props.body}</span><br/>
+                        <span>Message: {this.state.body}</span><br/>
                         <div className="separator"></div>
-                        <span>Date: {this.props.date}</span><br/>
+                        <span>Date: {this.state.date}</span><br/>
                     </div>
                 </div>
             </div>
