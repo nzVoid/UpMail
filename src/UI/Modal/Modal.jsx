@@ -9,18 +9,18 @@ class Modal extends React.Component {
     }
 
     render() {
-        return (
+        return(
             <div>
                 <Navbar></Navbar>
                 <LeftMenu></LeftMenu>
                 <div className="mailOpen">
                     <div className="mailFullContent">
                         <span className="close" onClick={this.onClose} >&times;</span>
-                        <span>From: {this.props.post.from}</span><br/>
+                        <span>From: {this.props.modalPost.from}</span><br/>
                         <div className="separator"></div>
-                        <span>Message: {this.props.post.body}</span><br/>
+                        <span>Message: {this.props.body}</span><br/>
                         <div className="separator"></div>
-                        <span>Date: {this.props.post.date}</span><br/>
+                        <span>Date: {this.props.date}</span><br/>
                     </div>
                 </div>
             </div>
