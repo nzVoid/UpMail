@@ -9,9 +9,9 @@ class Main extends React.Component {
     componentDidMount = async () => {
         const res = await fetch('http://localhost:3001/mailbox')
         const dataResp = await res.json()
-        this.setState({
+        /*this.setState({
             data: dataResp,
-        })
+        })*/
     }
     setPostData = (dataRe) => {
         this.setState(
@@ -27,14 +27,15 @@ class Main extends React.Component {
         // тут хранишь id той записи по которой юзер ткнул
         modalPost: 0,
         // тут хранишь только нужные для отображения данные
-        data: [{
-            id: 1,
-            from : 'test 1'
+        /*data: [{
+            id: 0,
+            from : ''
         },
         {
-            id: 2,
-            from : 'test 2'
-        },]
+            id: 1,
+            from : ''
+        },]*/
+        data: []
     }
 
     render() {
@@ -43,12 +44,14 @@ class Main extends React.Component {
                 <LeftMenu></LeftMenu>
                 <Navbar></Navbar>
                 {this.state.modalMailVisible ? 
-                    <Modal onClose={() => this.setState({ modalMailVisible: false })} modalPost={this.state.modalPost}
+                    <Modal onClose={() => this.setState({ modalMailVisible: false })}
+                           modalPost={this.state.modalPost}
                     /> : null}
                 <div className="postsMail">
                     {this.state.data.map(post =>
                         <MailPost post={post} setPostData={this.setPostData}></MailPost>
                     )}
+
                 </div>
             </div>
         );

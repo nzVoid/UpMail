@@ -1,25 +1,30 @@
 [
   {
+    "id": 0,
     "from": "vilgelm@gmail.com",
     "body": "hello",
     "date": "14:50 15.05.2033"
   },
   {
+    "id": 1,
     "from": "herdon@gmail.com",
     "body": "where is my money",
     "date": "13:50 15.05.2033"
   },
   {
+    "id": 2,
     "from": "fiebruifbef@gmail.com",
     "body": "hello dude",
     "date": "17:50 15.05.2033"
   },
   {
+    "id": 3,
     "from": "midas@gmail.com",
     "body": "u a ok",
     "date": "13:50 15.05.2033"
   },
   {
+    "id": 4,
     "from": "kelburn@gmail.com",
     "body": "hola senor",
     "date": "13:50 15.05.2033"

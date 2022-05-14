@@ -8,7 +8,7 @@ class Modal extends React.Component {
         const postId = this.props.modalPost;
         const res = await fetch(`http://localhost:3001/mailbox/${postId}`)
         const postData = await res.json();
-        this.setState({ 
+        this.setState({
             postData
         })
     }
@@ -20,7 +20,7 @@ class Modal extends React.Component {
     }
 
     onClose = () => {
-        this.onClose();
+        this.props.onClose();
     }
 
     render() {
@@ -31,11 +31,11 @@ class Modal extends React.Component {
                 <div className="mailOpen">
                     <div className="mailFullContent">
                         <span className="close" onClick={this.onClose} >&times;</span>
-                        <span>ID: {this.state.from}</span><br/>
+                        <span>ID: {this.state.postData.from}</span><br/>
                         <div className="separator"></div>
-                        <span>Message: {this.state.body}</span><br/>
+                        <span>Message: {this.state.postData.body}</span><br/>
                         <div className="separator"></div>
-                        <span>Date: {this.state.date}</span><br/>
+                        <span>Date: {this.state.postData.date}</span><br/>
                     </div>
                 </div>
             </div>

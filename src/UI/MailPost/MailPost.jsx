@@ -5,7 +5,6 @@ import '../../style/MailOpen.css'
 function MailPost(props){
     return (
         <div className="MailItem" onClick={() =>  {
-            /*debugger*/
             props.setPostData(props.post)
         }}>
            <div className="mailContent">
