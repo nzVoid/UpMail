@@ -8,10 +8,10 @@ import Modal from "../../UI/Modal/Modal";
 class Main extends React.Component {
     componentDidMount = async () => {
         const res = await fetch('http://localhost:3001/mailbox')
-        const dataResp = await res.json()
-        /*this.setState({
+        let dataResp = await res.json()
+        this.setState({
             data: dataResp,
-        })*/
+        })
     }
     setPostData = (dataRe) => {
         this.setState(

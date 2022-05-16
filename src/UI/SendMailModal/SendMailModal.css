@@ -2,7 +2,7 @@
     position: relative;
     width: 20vw;
     height: 55vh;
-    top:15%;
+    top:10%;
     left: 9vw;
     border-radius: 7px;
     border-width: 1px;
@@ -41,22 +41,21 @@
 
 }
 
-.fromInp{
+#fromInp{
     width: 18.5vw;
 }
-.topicInp{
+#topicInp{
     width: 18.5vw;
 
 }
-.bodyInp{
+#bodyInp{
     width: 18.5vw;
-    height: 47vh;
+    height: 40vh;
     resize: none;
 }
 
 .navUl{
     position: relative;
-
     margin: 0;
     padding: 2px;
 }
@@ -65,6 +64,17 @@
     display: inline;
     padding-right: 15px;
     cursor: pointer;
+}
+
+.sendBtn{
+    background: #282c34;
+    color: #f1c40c;
+    border-style: solid;
+    border-color: #f1c40c;
+    border-radius: 5px;
+    margin-top: 9px;
+    padding: 5px;
+    position: relative;
 }
 
 
